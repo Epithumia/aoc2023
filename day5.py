@@ -28,13 +28,6 @@ def plant(seed):
     return location
 
 
-def check_seed(seed):
-    for i in range(len(seeds) // 2):
-        if seeds[2 * i] <= seed < seeds[2 * i] + seeds[2 * i + 1]:
-            return True
-    return False
-
-
 def find_true_map():
     deltas = {}
     while len(queue) > 0:
