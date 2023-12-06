@@ -2,3 +2,4 @@
 .DS_Store
 rust/target/
 rust/Cargo.lock
+input/input*test.txt
