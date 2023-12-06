@@ -92,7 +92,6 @@ for pair in seed_ranges:
     queue.append((pair[0], pair[0] + pair[1]))
 
 deltas = find_true_map()
-keys = list(deltas.keys())
 
 minimum = 2**32 - 1
 for k in deltas.keys():
