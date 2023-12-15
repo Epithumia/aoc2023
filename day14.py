@@ -49,28 +49,6 @@ def cycle(plan):
     return plan
 
 
-def find_cycle_length(ctrl):
-    ctrl_str = ",".join(ctrl)
-    checks = []
-    for i in range(len(ctrl)):
-        sub = ",".join(ctrl[-(i + 1) :])
-        checks.append(ctrl_str.count(sub))
-        if 2 * ctrl_str.count(sub) in checks:
-            return i
-    return -1
-
-
-def find_non_cycle_length(ctrl, cycle_length):
-    i = 0
-    ctrl_str = ",".join(ctrl)
-    while i + cycle_length < len(ctrl):
-        sub = ",".join(ctrl[i : i + cycle_length])
-        if ctrl_str.count(sub) > 1:
-            return i
-        i += 1
-    return -1
-
-
 tilted = tilt(plan)
 
 print("Partie 1:", weight(tilted))
