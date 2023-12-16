@@ -128,7 +128,7 @@ for r in range(len(cave)):
 Tile.cave_map[0, 0].shine("E")
 Tile.process()
 
-print(sum([1 if Tile.cave_map[tile].is_shining() else 0 for tile in Tile.cave_map]))
+print("Partie 1:", sum([1 if Tile.cave_map[tile].is_shining() else 0 for tile in Tile.cave_map]))
 
 best_light = 0
 Tile.reset()
@@ -189,4 +189,4 @@ for i in range(-1, Tile.X + 1):
                 if light > best_light:
                     best_light = light
 
-print(best_light)
+print("Partie 2:", best_light)
